@@ -1,0 +1,13 @@
+.bill, .tip{
+    margin: 10px 5px;
+    padding: 5px 5px;
+    min-width: 600px;    
+}   
+
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 5px 7px;
+    border-radius: 5px;
+    
+}

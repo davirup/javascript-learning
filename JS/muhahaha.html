@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        th{
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <h2>Change the website according to input ^_^</h2>
+
+    <table>
+        <tr>
+            <th>Background Color</th>
+            <td><input type="text" class="bgColor"></td>
+        </tr>
+
+        <tr>
+            <th>Font Color</th>
+            <td><input type="text" class="textColor"></td>
+        </tr>
+
+        <tr>
+            <th>Font Size</th>
+            <td><input type="text" class="textSize"></td>   
+        </tr>
+    </table>
+
+
+    <script>
+        var bgColor = document.querySelector(".bgColor");
+        var textColor = document.querySelector(".textColor");
+        var textSize = document.querySelector(".textSize");
+        var body = document.querySelector("body");
+
+
+        bgColor.addEventListener('keyup', function(e){
+            body.style.backgroundColor = e.target.value;
+        })
+        textColor.addEventListener('keyup', function(e){
+            body.style.color = e.target.value;
+        })
+        textSize.addEventListener('keyup', function(e){
+            body.style.fontSize = e.target.value;
+        })
+    </script>
+</body>
+</html>
