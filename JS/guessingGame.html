@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1>Welcome to Guessing Game!!</h1>
+    <h2>Here we will give a set of questions and you write the answers. Click submit once finished and your score will be displayed</h2>
+
+    <br>
+
+    <div class="container">
+        <ol>
+            <li>
+                What am I?
+                <ul>
+                    <li>I am a bird</li>
+                    <li>I can swim, but can't fly</li>
+                    <li>I am black or white</li>
+                    <input type="text" class="answers">
+                </ul>
+            </li>
+            <br>
+            <li>
+                What am I?
+                <ul>
+                    <li>I can fly but not by myself</li>
+                    <li>I have wings</li>
+                    <input type="text" class="answers">
+                </ul>
+            </li>
+            <br>
+            <li>
+                What am I?
+                <ul>
+                    <li>I have a lot of water</li>
+                    <li>People can commonly see me from places that have sand</li>
+                    
+                    <input type="text" class="answers">
+                </ul>
+            </li>
+        </ol>
+        <br>
+        <button class="btn">Submit</button>
+        <h2>Score is : <span class="result"></span></h2>
+    </div>
+
+
+
+    <script>
+        var answerKey = ["duck", "plane", "sea"];
+        var words = "";
+        var btn = document.querySelector(".btn");
+        var ans = document.querySelectorAll(".answers");
+        var result = document.querySelector(".result");
+        var answer = [];
+        console.log(ans);
+        var score = 0;
+        
+        answerKey.forEach(function(node, index){
+            ans[index].addEventListener('keyup', function(e){
+            answer[index] = e.target.value;
+            })
+            
+        })
+
+        btn.addEventListener('click', function(e){
+            score = 0;
+            answerKey.forEach(function(node, index){
+                if(node == answer[index].toLowerCase()){
+                    score = score + 1;
+                }
+            })
+            result.innerText = score;
+        })
+       
+        
+        
+        
+        
+        // console.log(score);
+        
+        
+
+
+
+        
+    </script>
+</body>
+</html>
