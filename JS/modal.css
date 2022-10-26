@@ -1,0 +1,31 @@
+body {
+    background-color: yellow;
+    
+}
+.container {
+    
+    padding: 20px;
+    min-width: fit-content;
+    align-items: center;
+}
+.modalOff {
+    width:fit-content;
+    margin: auto;
+}
+.modalOn {
+    background-color: pink;
+    width:fit-content;
+    margin: auto;
+    padding:10px;
+    border-radius: 10px 0px;
+    
+
+}
+
+.on, .off {
+    padding:3px;
+    border-radius: 5px 0px;
+    color: antiquewhite;
+    background-color: blueviolet;
+
+}

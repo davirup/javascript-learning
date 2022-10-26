@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="modalOff">
+            <h2>Welcome to my Modal page!!</h2>
+            <button class="on">Click Me!</button>
+        </div>
+
+
+        <div class="modalOn" style = "display: none;">
+            <h2>So I am Avirup's first modal</h2>
+            <p>Since I am very young, i don't really have much to show you. I am also a bit shy, so if you could click the button below, i can go back. Have a nice day!</p>
+            <button class="off">Bye bye</button>
+        </div>
+
+
+    </div>
+
+    <script>
+        var on = document.querySelector(".on");
+        var off = document.querySelector(".off");
+        var modalOn = document.querySelector(".modalOn");
+        var modalOff = document.querySelector(".modalOff");
+
+        class Modal { //it's an object
+                
+                stuff() {
+                    on.addEventListener('click', function () {
+                        modalOff.style.display = "none";
+                        modalOn.style.display = "block";
+                    });
+
+                    off.addEventListener('click', function () {
+                        modalOn.style.display = "none";
+                        modalOff.style.display = "block";
+                    })
+                }
+
+            }
+            var firstModal = new Modal();
+            firstModal.stuff();
+            
+    
+        
+    </script>
+</body>
+</html>
