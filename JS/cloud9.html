@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        h1{
+            font-family: 'Quicksand', sans-serif;
+            font-size: xx-large;
+            color: coral;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10%;
+
+        }
+        .cloudy{
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            
+        }
+        #daddy1 {
+            background-color: rgb(36, 207, 150);
+            min-height: 60px;
+            width: 60px; 
+               
+        }
+        #daddy2 {
+            background-color: rgb(254, 119, 8);
+            min-height: 40px;
+            width: 40px; 
+        
+        }
+        #daddy3 {
+            background-color: rgb(11, 170, 227);
+            min-height: 30px;
+            width: 30px; 
+               
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Mousey</h1>
+    <div class="container">
+        <div class = "cloudy" id = "daddy1"></div>
+        <div class = "cloudy" id = "daddy2"></div>
+        <div class = "cloudy" id = "daddy3"></div>
+    </div>
+    
+
+    <script>
+        
+        var cloudy = document.querySelectorAll(".cloudy");
+
+        console.log(cloudy);
+        
+       cloudy.forEach(function (node, index) {
+
+        function movey(e){
+            
+            cloudy[index].style.left = e.pageX + 'px';
+            cloudy[index].style.top = e.pageY + 'px';
+            
+        }
+            cloudy[index].addEventListener('mousedown', () => {
+
+               cloudy[index].addEventListener('mousemove', movey)
+
+               cloudy[index].addEventListener('mouseup', () => {
+
+                   cloudy[index].removeEventListener('mousemove', movey)
+               })
+           })
+       })
+
+        
+       
+        
+        // cloudy.addEventListener('mousedown', ()=>{
+        //    cloudy.addEventListener('mousemove', movey)
+        //  })
+
+        // cloudy.addEventListener('mouseup', ()=>{
+        //     cloudy.removeEventListener('mousemove', movey)
+        // })
+
+        
+        
+    </script>
+</body>
+
+</html>
